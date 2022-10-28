@@ -1,1 +1,133 @@
 # HTML CSS BOOTSTRAP
+
+htm css y javascript son los pilares de toda app o sitio web.
+Cualquie cosa que funcione dentro de un navegador web(chrome,mozilla o safari) utiliza estos pilares. y no solo eso, hoy tambien se pueden hacer aplicaciones"nativas" con estas tecnologias.
+
+## HTML
+
+Significa ** Hyper test Markup Languaje**, que en castellano seria algo como lenguake de mercado de hyper texto. Lenguaje de marcado es por la*Etiquetas*. Dependiendo de su etiqueta el navegador lo procesa de diferente forma. Y el hyper texto se refiere a que estos documentos estan enlazados por *Links*.
+
+Con HTML crearemos *documentos estructurados* que el navegador puede interpretar
+
+El documento principal de un sitio o app se debe llamar **indexhtml**. Todo junto y con minusculas.
+
+Esta primera etiqueta indica al navegador la version de HTML. En este caso indica que es la version 5.
+```html
+ <!DOCTYPE html>
+ ```
+
+ Luego de eso viene la primera etiqueta que es parte del documento. la famosa etiquera **html**
+ ```<html lang="es">
+  ...
+  </html>
+  ```
+
+  Del ejemplo anterior vemos que esta etiquera se compone de 2 partes principales.La etiquera de apertura `<html>` y la de cierre `</html>`.
+
+  Entremedio de las etiquetas de apertura y cierre ira el contenido.
+
+  Ademas vemos la etiqueta de apertura tiene el **atributo** `lang="es"`, lo que le indica al navegador en que idiona esta el contenido del documento.
+
+  >**ATENCION**: Solo las etiquetas de apertura pueden tener atributos,las etiquetas de cierre no.
+
+  ## head
+
+  A continuacion viene etiqueta `head`.
+  Esta etiqueta entrega informacion al**Navegador** sobre como visualizar el contenido que vendra en las siguientes secciones. Por ejemplo se indica mediante etiquetas `meta`el set de caracteres que tutilizara la pagina.
+  Ejemplo:
+  ```html
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Microsystem</title>
+</head>
+```
+La tercera etiqueta `meta` que tiene el atributo `name="viewport"` permite que el contenido se cargue inicialmente considerando el tamaño de pantalla disponible, desde grandes a muy pequeños.
+
+Ademas dentro del head se encuentra la etiqueta `title`, que es la encargada de mostrar el nombre del sitio en la pestaña del navegador.
+
+Por otra parte dentro del `head` podemos cargar otros recursos que utilizara el documento como por ejemplo hojas de estilo CSS o archivos Javascript
+
+### Estructuras Jerarquica
+
+Algo que es muy importante notar y que no es tan evidente, es que los documentos HTML forman una estructura jerarquica bien definida del tipo arbol.
+Donde la etiqueta raiz es la estiqueta `html`. Lo podemos visualizar de la siguente forma
+
+```html
+  <html>
+    <head></head>
+    <body></body>
+  <html> 
+```
+
+Esto es muy importante de comprender ya que luego manejaremos las etiquetas pensando en su ubicacion relativa dentro del arbol. y pensaremos que las etiquetas son **nodos** que tienen **nodos padre**, **hermanos** y **nodos hijos**.
+
+## Etiquetas principales
+
+### Titulos
+
+Las etiquetas para hacer titulos son las etiquetas **h** con numeros del 1 al 6. Ejemplos
+
+```html
+ <h1>Super titulo</h1>
+ <h2>Super sub titulo</h2>
+ <h3>Super sub sub titulo</h3>
+ <h4>...</h4>
+ <h5>...</h5>
+ <h6>...</h6>
+```
+### links
+
+Los links son el corazon de internet y los crearemos frecuentemente.Se componen de el atributo `href` que indica el destino del link y su contenido, que es lo que se muestra al usuario.
+
+```html
+ <a href="heading.html">Titulo</a>
+```
+
+### Imagenes
+
+Las imagenes son una de las etiquetas que no requiere de cierre ya que la imagen que se despliega se indica mediante el atributo `src` y en caso de que la imagen no este disponible se despliega el texto indicado en el atributo `alt` conocido como texto alternativo.
+
+### Listas
+
+#### Ordenadas
+
+```html
+<ol>
+        <li>Lunes</li>
+        <li>Martes</li>
+        <li>Miercoles</li>
+        <li>Jueves</li>
+        <li>Viernes</li>
+    </ol>
+```
+### No ordenadas
+```html
+ <ul>Pilares de la web
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ul>
+    ```
+    ### Tablas
+
+    <table>
+        <tr>
+            <th>Italiano</th>
+            <th>Chacarero</th>
+        <tr>
+        <tr>   
+                <td>Tomate</td>
+                <td>Lechuga</td>
+        <tr>
+        <tr>        
+                <td>Palta</td>
+                <td>Potoros</td>
+        <tr>
+        <tr>        
+                <td>Mayo</td>
+                <td>Aji</td>
+        </tr>
+
+        
