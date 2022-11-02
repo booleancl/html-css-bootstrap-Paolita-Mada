@@ -130,4 +130,63 @@ Las imagenes son una de las etiquetas que no requiere de cierre ya que la imagen
                 <td>Aji</td>
         </tr>
 
-        
+### Etiquetas no semanticas
+Estas etiquetas no tiene un significado propio y sirven como contenedor para agrupar otras etiquetas
+## div
+```html
+<div>
+  <p>Hola mundo</p>
+</div>
+```
+## spam
+La etiqueta span se puede usar dentro de un texto.
+```html
+<div>
+  <p>Hola<span>mundo</span></p>
+</div>
+```
+La idea detras de los elementos no sematicos es utilizar css para darles estilo.
+Mas adelante, en este modulo veremos lo frecuente de su uso el marco de trabajo o framework bootstrap.
+
+## Formularios
+Contiene controles interectactivos para ingresar informacion
+
+```html
+<form action="/search" nethod="get">...
+
+</form>
+```
+
+Cuando enviamos el formulario mediante el metodo get, los parametros ingresados quedan reflejados en la uri despues del signo 7 y separados por `&`.
+
+## CSS
+
+Hojas de estilo en cascada( Cascade Style Sheets) Css nos permite entregar al sitio el aspecto que queremos. Lo hace aplicando reglas de estilo sobre diferentes elementos del HTML.
+
+Los navegadores tienen estilos predefiridos para mostrar las diferentes etiquetas.
+
+Cuando el codigo CSS esta definido dentro del mismo archivo html,se denomina css-inline, pero no es la mejor forma de definir los estilos que se van a utilizar en varias paginas. para eso es mejor utilizar un archivo externo y vincularlo al html.
+
+## sintaxis CSS
+las reglas CSS parten con un selector,luego dentro de las llaves se ingresan las propiedades junto con su valor.
+Ejemplo:
+
+```css
+h2{
+  color: blue;
+  font-size: 24px;
+}
+selector{  
+  propiedad: valor;
+  propiedad: valor;
+}
+p{
+  color:red;
+  text-aling: center;
+}
+```
+### Selectores
+
+en el ejemplo anterior el selector era la misma etiqueta, es decir, la regla de estilo aplica a **todos** las etiquetas de ese tipo, tenemos otros 2 selectores muy fecuentes.el selector por "id" y por "clase"
+
+el id es un atributo de las etiquetas HTML. toda etiqueta puede tener el atributo "id" para diferenciar del resto. y podemos usar ese atributo como selector css usando la notacion "a"
