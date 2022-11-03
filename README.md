@@ -189,4 +189,135 @@ p{
 
 en el ejemplo anterior el selector era la misma etiqueta, es decir, la regla de estilo aplica a **todos** las etiquetas de ese tipo, tenemos otros 2 selectores muy fecuentes.el selector por "id" y por "clase"
 
-el id es un atributo de las etiquetas HTML. toda etiqueta puede tener el atributo "id" para diferenciar del resto. y podemos usar ese atributo como selector css usando la notacion "a"
+el id es un atributo de las etiquetas HTML. toda etiqueta puede tener el atributo "id" para diferenciar del resto. y podemos usar ese atributo como selector css usando la notacion "#"
+
+ejemplo de selector por id
+```css
+#fname{
+  border-radius: 6px;
+}
+```
+CSS es muy flexibles y permite combinar selectores. Ej:
+
+```css
+/* Esta regla aplica a los parrafos con clase centered*/
+p.centered {
+  text-aling: center;
+  color: purple;
+}
+```
+
+Si tenemos reglas que se repiten. Ejemplo
+
+```css
+
+h1{
+  text-align: center;
+  color: blue
+}
+
+h2 {
+  text-align: center;
+  color: blue
+}
+```
+
+Podemos refactorizarlo en una sola regla:
+
+```css
+h1, h2{
+  text-align: center;
+  color: blue
+}
+```
+Selector | Ejemplo | Descripcion
+---- | ---- | ----
+#id | #some-id | Selecciona TODOS los elementos con `id="some-id"`
+.class | .some-class | Selecciona TODOS los elementos con clase `class="some-class"`
+element.class | p.intro Selecciona solo los `<p>` con clase `class="intro"`
+element. element | div, p | Selcciona todos los elementos `<div>` y `<p>`
+
+### Modelo de caja
+
+En esencia cada elemento html esta inserto dentro de una caja que consiste de: Margen, Borde, Padding y contenido.
+
+### Unidades de medida
+
+En general, no solo en desarrollo, podemos clasificar las unidades de medida en dos grupos:
+
+- Unidades Absolutas:Pixel(px)
+- Unidades Relativas: Porcertaje%, rem , em, vh , vw
+
+### rem 
+Es una unidad de medida relativa al font-size del elemento raiz
+
+### em
+Es relativa al font-size del mismo elemento
+### vh
+Es relativo al 1% del alto de la pantalla (viewport)
+### vw
+Es relativo al 1% del ancho de la pantalla o viewport
+
+### Tipos de diseños
+
+- El diseño estatico: Sirve para un solo tamaño de pantalla
+- El diseño fluido: Se basa en porcentanjes(%) dependiendo del tamaño de la pantalla.
+- Diseño responsivo: Tiene puntos de quiebre (distintos tamaños)para aplicar diferentes estilos
+
+### CSS MediaQueries
+
+Utiliza la regla `@media` para incluir un bloque de propiedades CSS solo si la condicion es verdadera.Ejemplo:
+
+```css
+@media only screen and (max-width: 600px){body{
+  background-color: green
+  { 
+}
+```
+Existen ciertos tamaños de pantalla mas o menos estandarizados y estas serian sus respectivas media queries:
+
+```css
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
+```
+### Display
+
+```css
+/*si el tamaño de la pantalla es de 600px o menor, el color de fondo del body sera verde*/ 
+@media only screen and (max-width: 600px){
+  body {
+    background-color: green
+  }
+
+  p{
+    display: none
+  }
+}
+```
+
+el valor de la propiedad display modifica como el navegador posicionara la caja del elemento.
+
+la caja puede ser de lado a lado, en en ese caso la propiedad display tendra el valor "block".
+Tambien podemos establecer el valor como `inline` y en ese caso, la caja sera del menor tamaño posible. ejemplo:
+
+.side-to-side{
+  display:block;
+  margin: solid
+}
+.narrow{
+  display: inline;
+  margin: solid
+}
+
