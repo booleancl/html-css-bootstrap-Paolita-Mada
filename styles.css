@@ -1,0 +1,53 @@
+/* Comment */
+
+body{
+    background-color:rgba(167, 103, 227, 0.37);
+    font-size: 12px;
+  }
+
+  @media only screen and (max-width: 600px){
+    body {
+        background-color: green; 
+    }
+  }
+  
+  h2, h3{
+    font-size: 50px;
+    color:rgb(46, 212, 62);
+    text-align: center;
+  }
+  
+  #submit{
+    background-color:rgb(221, 21, 21);
+  }
+  
+  .form_input{
+    border-radius: 6px;
+    border-color: blueviolet;
+  }
+  
+  p.centered {
+    text-align: center;
+    color: purple;
+  }
+
+  p{
+    font-size: 1.5rem;
+    padding: 2em;
+  }
+
+  .side-to-side{
+    display:block;
+    border: solid
+  }
+
+  /*angosto*/
+  .narrow{
+    display: inline;
+    border: solid
+  }
+
+
+
+
+
